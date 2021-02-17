@@ -1,0 +1,58 @@
+
+header{    
+    background-position: center center; 
+	width:350px;
+    height: 430px;
+    background-image: url(../img/maros.jpg);
+}
+
+h1{
+    background-color: rgba(248, 248, 248,0.65);
+    margin-top: 350px;
+    padding-left: 40rem; 
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;   
+    color: #416618;
+    font-weight: bold;
+}
+
+h2{    
+    margin-top: 10px;    
+    color:  #416618;
+    border-left: 3px dotted  #416618;
+    font-variant: small-caps;
+    padding: 5px 15px;
+}
+
+h3{    
+    font-weight: bold;
+    color: #894f3b;    
+    text-align: center;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+}
+
+
+li{
+    list-style-image: url(../img/713.jpg);
+    float: left;
+    margin-left: 40px;
+}
+
+
+td,th{
+    text-align: center;
+}
+
+thead>tr:first-child{    
+    letter-spacing: 2px;  
+    text-transform: uppercase;  
+}
+
+.navbar{
+    background-color: #eb8006;
+}
+
+p{
+    text-align: justify;
+    text-indent: 15px;
+}
