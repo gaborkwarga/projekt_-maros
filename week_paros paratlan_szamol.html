@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang = "hu">
+<body>
+
+<script>
+<!-- language: lang-js -->
+
+    Date.prototype.getWeekNumber = function(){
+      var d = new Date(Date.UTC(this.getFullYear(), this.getMonth(), this.getDate()));
+      var dayNum = d.getUTCDay() || 7;
+      d.setUTCDate(d.getUTCDate() + 4 - dayNum);
+      var yearStart = new Date(Date.UTC(d.getUTCFullYear(),0,1));
+      return Math.ceil((((d - yearStart) / 86400000) + 1)/7)
+    };
+
+    function checkWeek() {
+      var s = document.getElementById('dString').value;
+      var m = moment(s, 'YYYY-MM-DD');
+      document.getElementById('momentWeek').value = m.format('W');
+      document.getElementById('answerWeek').value = m.toDate().getWeekNumber();      
+    }
+
+<!-- language: lang-html -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+
+    Enter date  YYYY-MM-DD: <input id="dString" value="2021-02-22">
+    <button onclick="checkWeek(this)">Check week number</button><br>
+    Moment: <input id="momentWeek" readonly><br>
+    Answer: <input id="answerWeek" readonly>
+
+<!-- end snippet -->
+
+
+
+
+</body>
+</html>
+

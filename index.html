@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Szeged Maros Rendelő</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+	<style>
+	li{
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		}
+	</style>
+
+<script>
+		function myFunction() {
+			Date.prototype.getWeekNumber = function(){
+			var d = new Date(Date.UTC(this.getFullYear(), this.getMonth(), this.getDate()));
+			var dayNum = d.getUTCDay() || 7;
+			d.setUTCDate(d.getUTCDate() + 4 - dayNum);
+			var yearStart = new Date(Date.UTC(d.getUTCFullYear(),0,1));
+			return Math.ceil((((d - yearStart) / 86400000) + 1)/7)
+			};
+
+		document.write('A mostani hét száma:  ' + new Date().getWeekNumber()+ '\n');
+  
+
+
+		var g = new Date().getWeekNumber()
+			if (g % 2 == 0) {
+				document.write('<br>');
+				document.write ('A mai dátum: ' + new Date() + '\n');
+				g = document.write ('<b>páros hét van </b>');
+			} else {
+				document.write ('A mai dátum: '+ new Date() + '\n');
+				g =  document.write ('<b>páratlan hét van </b>');
+				}
+			document.getElementById("demo").innerHTML = g;
+		}
+</script>	
+	
+</head>
+
+<body>
+    <header class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="d-none d-sm-block">Maros utcai rendelő</h1>
+            </div>
+        </div>
+    </header>
+    <nav class="container navbar navbar-expand-lg navbar-light">
+        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+<!-- Címsor -->
+            <div class="navbar-nav">
+                <a class="nav-link" href="index.html">Főoldal <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="index.html#leggyakoribb">Leggyakoribb kérdések</a>
+                <!-- <a class="nav-link" href="index.html#kulonleges">Különleges </a> -->
+				<a class="nav-link" href="index.html#hirdető tábla2">Hirdető tábla </a>
+			    <a class="nav-link" href="patikaindex.html"> Patikák </a>
+				<a class="nav-link" href="video.html"> Karantén idejére</a>
+				<a class="nav-link" href="galeria.html">Galéria</a>
+                <a class="nav-link" href="https://www.szegedvaros.hu/haziorvosok/" target="_blank">Információk az alapellátásról</a>	
+			
+				
+            </div>
+        </div>
+    </nav>
+    <main class="container ">
+        <article class="row">
+            <div class="col-4">
+                <h2>Elérhetőség</h2>
+				<h2> <i> Dr. Szabó Erzsébet Gyöngyi háziorvos</i> </h2>
+				<ul>
+				<li> Postai cím: 6723, Szeged, Maros utca 22. </li>
+                <li> Email cím: marosutca[kukac]gmail.com  </li>
+                <li> Telefonszám: 06/62/310 - 695 </li>
+				<li> Mobiltelefonszám: 06/30/8388-277 </li>
+			<h2> <i> Regdon Henriett körzeti nővér </i> </h2>
+				<li> Mobiltelefonszám: 06/30/6079-832 </li>
+				</ul>
+				
+				
+				
+            </div>
+		
+			<br>
+			 <div class="col-md-8">
+                 <table class="d-none d-md-table table table-striped">
+				 <br>
+			<br>
+                    <thead>
+                        <tr class="bg-light">
+                            <th colspan="8">Rendelési idő</th>
+                            
+                        </tr>
+                        <tr>
+                            <th>nap</th>
+                            <th>hétfő</th>
+                            <th>kedd</th>
+                            <th>szerda</th>
+                            <th>csütörtök</th>
+                            <th>péntek</th>                         
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>páros hét</td>
+                            <td><i> 8.<sup>00 </sup>- 12.<sup>30 </sup></i></td>
+                            <td><i> 8.<sup>00 </sup>- 12.<sup>30 </sup></i></td>
+                            <td><i> 8.<sup>00 </sup>- 12.<sup>30 </sup></i></td>
+                            <td><i> 8.<sup>00 </sup>- 12.<sup>30 </sup></i></td>
+                            <td><i> 8.<sup>00 </sup>- 12.<sup>30 </sup></i></td>                        
+                        </tr>
+						<tr>
+                            <td>páratlan hét</td>
+                            <td>13.<sup>00 </sup>- 16.<sup>30 </sup></td>
+                            <td>13.<sup>00 </sup>- 16.<sup>30 </sup></td>
+                            <td>13.<sup>00 </sup>- 16.<sup>30 </sup></td>
+                            <td>13.<sup>00 </sup>- 16.<sup>30 </sup></td>
+                            <td>13.<sup>00 </sup>- 16.<sup>30 </sup></td>               
+                        </tr>																
+                    </tbody>
+                </table>
+	
+	
+    <!-- <script src="/id.js"> </script> -->
+   <script>
+        myFunction() 
+		<!-- { -->
+       <!-- document.getElementById("demo").innerHTML = "My First JavaScript"; -->
+       <!-- } -->
+   </script>
+		
+		
+		
+				<!-- <p class="text-right"><a href="week.html" class="btn btn-outline-success">Milyen hét van most? Részletes segítség itt!</a></p> -->
+          </div>
+			
+        </article>
+        <article class="row">
+            <div class="col-12">
+                <h2 id="leggyakoribb">Leggyakoribb kérdések</h2>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+                <img src="img/01.jpg" alt="01" class="img-fluid img-thumbnail">
+                <!-- <h3>Szeged, Maros utca 22</h3> -->
+                <!-- <p>Kérdezz-felelek az mRNS alapú COVID-19 védőoltásról</p> -->
+				<a href="https://u-szeged.hu/sztehirek/2021-januar/kerdezz-felelek-mrns?objectParentFolderId=19396&fbclid=IwAR2BPOOV5k22iekwbJYGHuvUVldVKshQy1d4hKFszjIjZU3lOUnbNC_Hjyc" target="_blank">Kérdezz-felelek az mRNS alapú COVID-19 védőoltásról.</a> </p>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+                <img src="img/02.jpg" alt="02" class="img-fluid img-thumbnail">
+                <!-- <h3>Szeged, Maros utca 22</h3> -->
+                <p>Coronavírus elleni oltásával kapcsolatban megjelent ajánlások</p>
+				<a href="https://u-szeged.hu/szakk/2021-januar/szegedi-tudomanyegyetem?objectParentFolderId=52653&fbclid=IwAR25-d1qCBDAae-1c1yuP7Q7cbReNrm-E2pZQf-qSyh9ea_RFIqW3dgdLVc" target="_blank">A szegedi neurológusok ajánlása.</a> </p>
+				<a href="https://www.facebook.com/145718698777219/posts/4360549607294086/" target="_blank">Kardiológiai Társaság ajánlása.</a> </p>
+			
+            </div>
+            <div class="col-sm-6 col-lg-4">
+                <img src="img/03.jpg" alt="03" class="img-fluid img-thumbnail">
+                <!-- <h3>Szeged, Maros utca 22</h3> -->
+                <p>Covid oltásra való országos jelentkezés</p>
+				<p> <a href="https://vakcinainfo.gov.hu/regisztracio-oltasra" target="_blank">Az oltásra való jelentkezését itt teheti meg.</a> </p>
+				
+				
+            </div>
+            
+        </article>
+        <article class="row mb-5">
+            <div class="col-12">
+                <h2 id="hirdető tábla2">Hirdető tábla </h2>
+                <ul>
+                    <li>A rendelő legfontosabb információi a betegek számára.</li>
+					<li> <a href="https://www.facebook.com/groups/740482753554572/files" target="_blank">Koronavírus vakcináció - szakirodalmi tallózó.</a> </li>
+                </ul>
+            </div>
+					
+			<p class="text-right"><a href="hirdeto.html#hirdető tábla2" class="btn btn-outline-success">Részletesen itt!</a></p>
+        </article>
+    </main>
+    <script src="bootstrap/js/jquery-3.5.1.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head> 
+<meta charset = "utf-8">
+<title> week</title>
+<link rel="stylesheet" type="text/css" ref="css.css">
+</head> 
+
+
+
+<body>
+
+<p>Click the button</p>
+
+<button onclick="myFunction()">Nyomd meg</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+Date.prototype.getWeekNumber = function(){
+  var d = new Date(Date.UTC(this.getFullYear(), this.getMonth(), this.getDate()));
+  var dayNum = d.getUTCDay() || 7;
+  d.setUTCDate(d.getUTCDate() + 4 - dayNum);
+  var yearStart = new Date(Date.UTC(d.getUTCFullYear(),0,1));
+  return Math.ceil((((d - yearStart) / 86400000) + 1)/7)
+};
+
+document.write('A mostani hét száma  ' + new Date().getWeekNumber()+ '\n');
+
+
+
+    var g = new Date().getWeekNumber()
+  if (g % 2 == 0) {
+   document.write('<br>');
+    document.write ('A mai dátum: ' + new Date() + '\n');
+    g = document.write ("páros hét van");
+  } else {
+      document.write ('A mai dátum: '+ new Date() + '\n');
+    g =  document.write ("páratlan hét van");
+  }
+  document.getElementById("demo").innerHTML = g;
+}
+</script>
+
+</body>
+</html>
+
