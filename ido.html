@@ -1,0 +1,72 @@
+ <html lang = "hu">
+
+<head>
+<meta charset = "utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1250">
+
+<script>
+  honapok=new Array("január","február","március","április","május","június","július","augusztus","szeptember","november","december")
+  napok=new Array("vasárnap", "hétfő","kedd","szerda","csütörtök","péntek","szombat")
+  <!-- het=new Array(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53) -->
+
+function idoki()
+   {
+  var Digital=new Date();
+  var ev=Digital.getFullYear();
+  var ho=Digital.getMonth();
+  var nap=Digital.getDate();
+  var napnev=napok[Digital.getDay()]
+  var hours=Digital.getHours();
+  var minutes=Digital.getMinutes();
+  var seconds=Digital.getSeconds();
+  document.getElementById('hely').innerHTML=ev+". "+honapok[ho]+" "+nap+". "+napnev+" "+hours+":"+((minutes<10)?0:"")+minutes+":"+((seconds<10)?0:"")+seconds
+//  setTimeout("idoki()",60000) // Percenként hívja csak meg, nem kell a mp. kiírás
+  setTimeout("idoki()",1000) // Másodpercenként hívja meg, teszhez jobb
+  }
+</script>
+
+<script>
+function myFunction() {
+  Date.prototype.getWeekNumber = function(){
+  var d = new Date(Date.UTC(this.getFullYear(), this.getMonth(), this.getDate()));
+  var dayNum = d.getUTCDay() || 7;
+  d.setUTCDate(d.getUTCDate() + 4 - dayNum);
+  var yearStart = new Date(Date.UTC(d.getUTCFullYear(),0,1));
+  return Math.ceil((((d - yearStart) / 86400000) + 1)/7)
+};
+
+document.write('A mostani h�t sz�ma  ' + new Date().getWeekNumber()+ '\n');
+
+
+
+    var g = new Date().getWeekNumber()
+  if (g % 2 == 0) {
+    document.write('<br>');
+    document.write ('A mai d�tum: ' + new Date() + '\n');
+    g = document.write ("p�ros h�t van");
+  } else {
+      document.write ('A mai d�tum: '+ new Date() + '\n');
+      g =  document.write ("p�ratlan h�t van");
+  }
+  document.getElementById("demo").innerHTML = g;
+}
+
+</script>
+
+</head>
+
+<body onload="idoki()" onload="myFunction()">
+
+<div id="hely"></div>
+
+<!-- <button onclick="myFunction()">Nyomd meg</button> -->
+
+<!-- <p id="demo"></p> -->
+
+<!-- <body onload = "myFunction()"> -->
+
+</body>
+
+</html>
+
+
